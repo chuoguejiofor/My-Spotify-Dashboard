@@ -1,0 +1,11 @@
+install.packages('spotifyr')
+library(spotifyr)
+Sys.setenv(SPOTIFY_CLIENT_ID = '2043e42f71d546a7aa36fbd98e3f0390')
+Sys.setenv(SPOTIFY_CLIENT_SECRET = 'cf160f662ff34a6ab98cff9f12e5ea01' )
+access_token <- get_spotify_access_token()
+obama <- get_user_audio_features('barackobama')
+
+library(shiny)
+require(shinydashboard)
+library(ggplot2)
+library(dplyr)
