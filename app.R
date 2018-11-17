@@ -1,5 +1,6 @@
 ## app.R ##
 library(shinydashboard)
+library(shinycssloaders)
 
 ui <- dashboardPage(
   dashboardHeader(title = "My Spotify Dashboard"),
@@ -7,7 +8,7 @@ ui <- dashboardPage(
   dashboardBody(
     # Boxes need to be put in a row (or column)
     fluidRow(
-      box(plotOutput("plot1", height = 250)),
+      box(withSpinner(plotOutput("plot1", height = 250))),
       
       box(
         title = "Enter username",
